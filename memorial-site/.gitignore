@@ -1,0 +1,9 @@
+node_modules
+/dist
+/.nx
+/.angular
+.DS_Store
+*.log
+.idea
+.vscode
+coverage
