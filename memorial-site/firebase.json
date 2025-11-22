@@ -1,0 +1,23 @@
+{
+  "hosting": {
+    "public": "dist/apps/memorial",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "predeploy": [
+      "npm run build"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  },
+  "functions": {},
+  "storage": {},
+  "database": {},
+  "emulators": {}
+}

@@ -20,3 +20,16 @@ Provide a Google Photos API key and album id in the page controls to load images
 ## Virtual candle
 
 Visitors can light a candle and leave a personal message. The state is saved to local storage so it remains lit when the page reloads.
+
+## Deploying to Firebase Hosting
+
+1. Update `.firebaserc` with your Firebase project id under `projects.default`.
+2. Authenticate with Firebase (only required once per machine):
+   ```bash
+   npx firebase login
+   ```
+3. Build and deploy the production bundle to Firebase Hosting:
+   ```bash
+   npm run deploy
+   ```
+   The command builds the app to `dist/apps/memorial` and deploys it, serving `index.html` for all routes.

@@ -7,7 +7,8 @@
     "build": "nx build memorial",
     "test": "nx test memorial",
     "lint": "nx lint memorial",
-    "format": "nx format:write"
+    "format": "nx format:write",
+    "deploy": "npm run build && npx firebase deploy"
   },
   "devDependencies": {
     "@nx/angular": "^19.8.5",
@@ -21,7 +22,8 @@
     "@angular-eslint/template-parser": "^19.0.2",
     "@typescript-eslint/eslint-plugin": "^8.8.1",
     "@typescript-eslint/parser": "^8.8.1",
-    "sass": "^1.77.8"
+    "sass": "^1.77.8",
+    "firebase-tools": "^13.29.0"
   },
   "dependencies": {
     "@angular/animations": "^19.0.0",
