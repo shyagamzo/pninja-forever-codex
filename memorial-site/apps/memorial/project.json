@@ -1,0 +1,61 @@
+{
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "name": "memorial",
+  "projectType": "application",
+  "sourceRoot": "apps/memorial/src",
+  "prefix": "app",
+  "targets": {
+    "build": {
+      "executor": "@nx/angular:build",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/memorial",
+        "index": "apps/memorial/src/index.html",
+        "main": "apps/memorial/src/main.ts",
+        "polyfills": ["apps/memorial/src/polyfills.ts"],
+        "tsConfig": "apps/memorial/tsconfig.app.json",
+        "assets": [
+          "apps/memorial/src/favicon.ico",
+          "apps/memorial/src/assets"
+        ],
+        "styles": ["apps/memorial/src/styles.scss"],
+        "inlineStyleLanguage": "scss",
+        "bundler": "vite"
+      },
+      "configurations": {
+        "production": {
+          "fileReplacements": [
+            {
+              "replace": "apps/memorial/src/environments/environment.ts",
+              "with": "apps/memorial/src/environments/environment.prod.ts"
+            }
+          ],
+          "buildOptimizer": true,
+          "optimization": true
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nx/angular:dev-server",
+      "options": {
+        "buildTarget": "memorial:build"
+      },
+      "configurations": {
+        "production": {
+          "buildTarget": "memorial:build:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/memorial/**/*.ts", "apps/memorial/**/*.html"]
+      }
+    },
+    "test": {
+      "executor": "@nx/angular:component-test",
+      "options": {}
+    }
+  }
+}

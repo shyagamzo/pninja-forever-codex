@@ -1,0 +1,38 @@
+{
+  "name": "memorial-site",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "nx serve memorial",
+    "build": "nx build memorial",
+    "test": "nx test memorial",
+    "lint": "nx lint memorial",
+    "format": "nx format:write"
+  },
+  "devDependencies": {
+    "@nx/angular": "^19.8.5",
+    "@nx/vite": "^19.8.5",
+    "@types/node": "^22.5.4",
+    "nx": "^19.8.5",
+    "typescript": "~5.6.3",
+    "eslint": "^9.9.1",
+    "@angular-eslint/eslint-plugin": "^19.0.2",
+    "@angular-eslint/eslint-plugin-template": "^19.0.2",
+    "@angular-eslint/template-parser": "^19.0.2",
+    "@typescript-eslint/eslint-plugin": "^8.8.1",
+    "@typescript-eslint/parser": "^8.8.1",
+    "sass": "^1.77.8"
+  },
+  "dependencies": {
+    "@angular/animations": "^19.0.0",
+    "@angular/common": "^19.0.0",
+    "@angular/compiler": "^19.0.0",
+    "@angular/core": "^19.0.0",
+    "@angular/forms": "^19.0.0",
+    "@angular/platform-browser": "^19.0.0",
+    "@angular/platform-browser-dynamic": "^19.0.0",
+    "@angular/router": "^19.0.0",
+    "rxjs": "^7.8.1",
+    "zone.js": "~0.14.10"
+  }
+}
